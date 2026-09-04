@@ -4,6 +4,15 @@ const html = await readFile("index.html", "utf8");
 const css = await readFile("styles.css", "utf8");
 const js = await readFile("site.js", "utf8");
 
+const screenshotFiles = [
+  "teamframe-dashboard.png",
+  "teamframe-employees.png",
+  "teamframe-employee-record.png",
+  "teamframe-leave.png",
+  "teamframe-onboarding.png",
+  "teamframe-policies.png",
+];
+
 const requiredSections = [
   "Who it is for",
   "What TeamFrame handles",
@@ -27,6 +36,12 @@ if (!html.includes("Book a walkthrough")) {
 
 if (!js.includes("TEAMFRAME_WALKTHROUGH_URL")) {
   throw new Error("CTA script does not use the configured walkthrough URL");
+}
+
+for (const screenshot of screenshotFiles) {
+  if (!html.includes(`./assets/screenshots/${screenshot}`)) {
+    throw new Error(`Missing screenshot reference: ${screenshot}`);
+  }
 }
 
 for (const color of ["#01ff22", "#42494d", "#68707d", "#20242b", "#f4f6f8", "#ffffff"]) {
