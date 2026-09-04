@@ -1,0 +1,11 @@
+{
+  "name": "teamframe-commercial-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "node scripts/check.mjs",
+    "build": "node scripts/build.mjs",
+    "dev": "python -m http.server 4173 -d dist"
+  }
+}
