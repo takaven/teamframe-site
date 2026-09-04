@@ -38,6 +38,10 @@ if (!js.includes("TEAMFRAME_WALKTHROUGH_URL")) {
   throw new Error("CTA script does not use the configured walkthrough URL");
 }
 
+if (!js.includes("configNote.remove()")) {
+  throw new Error("Configured walkthrough URL must remove the launch configuration notice");
+}
+
 for (const screenshot of screenshotFiles) {
   if (!html.includes(`./assets/screenshots/${screenshot}`)) {
     throw new Error(`Missing screenshot reference: ${screenshot}`);
