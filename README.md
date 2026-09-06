@@ -1,6 +1,6 @@
 # TeamFrame Commercial Site
 
-Separate local launch-site project for TeamFrame.
+Separate GitHub-backed commercial-site project for TeamFrame.
 
 This project does not contain TeamFrame application source code and does not deploy the product. It uses approved TeamFrame brand assets and current accepted product screenshots copied from the private TeamFrame repository.
 
