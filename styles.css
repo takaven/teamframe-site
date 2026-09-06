@@ -72,16 +72,9 @@ footer {
 }
 
 .teamframe-mark {
-  display: inline-flex;
-  align-items: center;
-  min-height: 45px;
-  background: var(--graphite);
-  color: var(--white);
-  padding: 0 8px;
-  font-size: clamp(1.62rem, 3vw, 2.48rem);
-  font-weight: 900;
-  line-height: 1;
-  letter-spacing: 0;
+  display: block;
+  width: min(290px, 52vw);
+  height: auto;
 }
 
 .hero-grid,
@@ -462,8 +455,7 @@ footer {
 }
 
 .footer-teamframe {
-  min-height: 34px;
-  font-size: 1.4rem;
+  width: min(180px, 46vw);
 }
 
 .takaven-endorsement {
