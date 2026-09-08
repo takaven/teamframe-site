@@ -38,6 +38,10 @@ if (!js.includes("TEAMFRAME_WALKTHROUGH_URL")) {
   throw new Error("CTA script does not use the configured walkthrough URL");
 }
 
+if (!js.includes("mailto:admin@takaven.com?subject=TeamFrame%20walkthrough%20request")) {
+  throw new Error("CTA script does not use the approved fallback contact destination");
+}
+
 if (!js.includes("configNote.remove()")) {
   throw new Error("Configured walkthrough URL must remove the launch configuration notice");
 }
