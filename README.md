@@ -10,9 +10,9 @@ The canonical repository is `takaven/teamframe-site` on GitHub. Local folders ar
 
 ## Launch Configuration
 
-`NEXT_PUBLIC_TEAMFRAME_WALKTHROUGH_URL` is required before deployment.
+`NEXT_PUBLIC_TEAMFRAME_WALKTHROUGH_URL` may be set before deployment when a dedicated walkthrough destination is available.
 
-All "Book a walkthrough" CTAs read from that single environment variable. When it is absent during local development, the CTA remains visible but is non-destructive and disabled.
+All "Book a walkthrough" CTAs read from that single environment variable when it is present. When it is absent, the CTA uses the approved contact fallback: `mailto:admin@takaven.com?subject=TeamFrame%20walkthrough%20request`.
 
 ## Local Use
 

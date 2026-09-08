@@ -1,17 +1,13 @@
-const configuredUrl = window.TEAMFRAME_WALKTHROUGH_URL || "";
+const fallbackWalkthroughUrl = "mailto:admin@takaven.com?subject=TeamFrame%20walkthrough%20request";
+const configuredUrl = window.TEAMFRAME_WALKTHROUGH_URL || fallbackWalkthroughUrl;
 const configNote = document.querySelector(".config-note");
 
 document.querySelectorAll(".walkthrough-cta").forEach((cta) => {
-  if (!configuredUrl) {
-    cta.addEventListener("click", (event) => event.preventDefault());
-    return;
-  }
-
   cta.setAttribute("href", configuredUrl);
   cta.removeAttribute("aria-disabled");
   cta.removeAttribute("title");
 });
 
-if (configuredUrl && configNote) {
+if (configNote) {
   configNote.remove();
 }
